@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "PlivoVoiceWebRTC",
+    name: "WebRTC",
     platforms: [
         .iOS(.v11)
     ],
