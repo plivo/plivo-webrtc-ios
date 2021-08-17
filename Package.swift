@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "PlivoVoiceWebRTC",
+    platforms: [
+        .macOS(.v10_14), .iOS(.v13)
+    ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
@@ -21,6 +24,11 @@ let package = Package(
         .target(
             name: "PlivoVoiceWebRTC",
             dependencies: []),
+        .binaryTarget(
+                    name: "WebRTC.xcframework",
+                    url: "https://s3.us-west-1.amazonaws.com/helpers.plivo.com/ios/WebRTC.xcframework.zip",
+                    checksum: "The checksum of the XCFramework inside the ZIP archive."
+        ),
         .testTarget(
             name: "PlivoVoiceWebRTCTests",
             dependencies: ["PlivoVoiceWebRTC"]),
