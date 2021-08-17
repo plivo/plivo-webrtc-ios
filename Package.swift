@@ -27,7 +27,7 @@ let package = Package(
         .binaryTarget(
                     name: "WebRTC.xcframework",
                     url: "https://s3.us-west-1.amazonaws.com/helpers.plivo.com/ios/WebRTC.xcframework.zip",
-                    checksum: "The checksum of the XCFramework inside the ZIP archive."
+                    checksum: "30d36ce5e76bcff2dc2136702190cfde-12"
         ),
         .testTarget(
             name: "PlivoVoiceWebRTCTests",
