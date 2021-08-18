@@ -8,6 +8,6 @@ Pod::Spec.new do |s|
   s.authors      = { 'Plivo Inc' => 'support@plivo.com' }
   s.source       = { :http => "https://s3.us-west-1.amazonaws.com/helpers.plivo.com/ios/WebRTC.framework.zip" }
   s.requires_arc = true
-  s.platform = :ios, "11.0"
+  s.platform = :ios, "10.0"
   s.ios.vendored_frameworks = 'WebRTC.framework'
 end
