@@ -7,6 +7,8 @@
 ![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-green.svg)
 [![Swift Package Manager](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)
 
+# PlivoWebRTC 
+
 This is WebRTC framework for iOS that [Plivo](https://plivo.com/) builds on top of [Google WebRTC](https://webrtc.org/native-code/ios/). It includes build which is bitcode enabled.
 
 ## Requirements
