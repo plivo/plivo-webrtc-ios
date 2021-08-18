@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "WebRTC"
+  s.name         = "PlivoWebRTC"
   s.version      = "1.0.0"
   s.summary      = "WebRTC Framework"
   s.description  = "WebRTC Framework for Plivo SDK's"
