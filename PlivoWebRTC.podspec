@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PlivoWebRTC"
-  s.version      = "1.0.21"
+  s.version      = "1.0.22"
   s.summary      = "WebRTC XCFramework"
   s.description  = "WebRTC XCFramework for Plivo SDK's"
   s.homepage     = "https://www.plivo.com/docs/sdk/client/ios/overview/"
@@ -9,6 +9,6 @@ Pod::Spec.new do |s|
   s.source       = { :http => "https://s3.us-west-1.amazonaws.com/helpers.plivo.com/ios/WebRTC.xcframework.zip" }
   s.requires_arc = true
   s.platform = :ios, "12.0"
-  s.ios.vendored_frameworks = 'WebRTC.xcframework', 'WebRTC.xcframework'
+  s.ios.vendored_frameworks = 'WebRTC.xcframework'
 end
 
