@@ -93,6 +93,7 @@ swift package compute-checksum WebRTC.xcframework.zip
 ```swift
   git tag '1.0.6'
   git push --tags
+  pod cache clean --all
   pod trunk register {EMAIL} ‘{NAME}' --description='macbook air'
 ```
 * Verify Email from cocoapods.
