@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PlivoWebRTC"
-  s.version      = "1.0.22"
+  s.version      = "1.0.23"
   s.summary      = "WebRTC XCFramework"
   s.description  = "WebRTC XCFramework for Plivo SDK's"
   s.homepage     = "https://www.plivo.com/docs/sdk/client/ios/overview/"
