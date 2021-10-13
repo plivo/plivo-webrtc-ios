@@ -99,5 +99,7 @@ swift package compute-checksum WebRTC.xcframework.zip
 * Verify Email from cocoapods.
 * Release on CocoaPods. 
 ```swift
- pod trunk push PlivoWebRTC.podspec
+ pod lib lint --verbose --allow-warnings --no-clean
+ pod spec lint --verbose
+ pod trunk push PlivoWebRTC.podspec --verbose
 ```
