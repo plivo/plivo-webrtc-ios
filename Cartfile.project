@@ -1,0 +1,5 @@
+PlivoWebRTC:
+  project: PlivoWebRTC.xcworkspace
+  sdks:
+  - iphonesimulator
+  - iphoneos
