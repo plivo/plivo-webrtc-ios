@@ -103,7 +103,7 @@ swift package compute-checksum WebRTC.xcframework.zip
  pod spec lint --verbose
  pod trunk push PlivoWebRTC.podspec --verbose
 ```
-### Install PlivoWebRTC Framework from [Carthage](https://github.com/Carthage/Carthage)
+### Install PlivoWebRTC Framework from Carthage
 
 > Requires Carthage version 0.38 or higher
 
