@@ -103,3 +103,10 @@ swift package compute-checksum WebRTC.xcframework.zip
  pod spec lint --verbose
  pod trunk push PlivoWebRTC.podspec --verbose
 ```
+### Install PlivoWebRTC Framework from [Carthage](https://github.com/Carthage/Carthage)
+
+> Requires Carthage version 0.38 or higher
+
+1. Add `binary "https://raw.githubusercontent.com/plivo/plivo-webrtc-ios/main/PlivoWebRTC.json"` to your Cartfile.
+2. Run `carthage update --use-xcframeworks`.
+3. Go to your Xcode project's `"General"` settings. Open `<YOUR_XCODE_PROJECT_DIRECTORY>/Carthage/Build/iOS` in Finder and drag `WebRTC.framework` to the `"Embedded Binaries"` section in Xcode. Make sure `Copy items if needed` is selected and click `Finish`.
