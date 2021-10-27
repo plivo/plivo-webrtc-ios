@@ -21,7 +21,7 @@ This is WebRTC framework for iOS that [Plivo](https://plivo.com/) builds on top 
 
 The size of the framework is huge. In order to install on your project, you can use CocoaPods or Swift Package Manager. If you want to use CocoaPods, then you have to install git-lfs first. Please refer to the [git-lfs document](https://git-lfs.github.com/).
 
-#### CocoaPods
+### CocoaPods
 
 Add below into your Podfile.
 
@@ -42,7 +42,7 @@ pod install
 
 Now you can see installed WebRTC framework by inspecting `YOUR_PROJECT.xcworkspace`.
 
-#### Swift Package Manager
+### Swift Package Manager
 
 The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. It is in early development, but PlivoWebRTC does support its use on supported platforms.
 
