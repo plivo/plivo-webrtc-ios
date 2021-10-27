@@ -53,60 +53,11 @@ dependencies: [
     .package(url: "https://github.com/plivo/plivo-webrtc-ios.git", .upToNextMajor(from: "1.0.6"))
 ]
 ```
-## Build & Release
 
-To build and release the latest version of WebRTC use the given instruction on [Google WebRTC](https://webrtc.org/native-code/ios/). 
-
-#### Building the XCFramework:
-
-Once the individual archives have been compiled, we can create the XCFramework itself.
-
-```swift
-xcodebuild -create-xcframework \
-	-framework /{your webrtc out device path}/WebRTC.framework \
-	-framework /{your webrtc out sim path}/WebRTC.framework \
-	-output out/WebRTC.xcframework
- ```
-  
-#### Publicly host the XCFramework
-
-In order to distribute the compiled package, we need to host it somewhere with public accessibility. One way to do this is to push the XCFramework to the S3 bucket and use that as the binary target URL.
-
-Going with this route, we need to create a ZIP file with the XCFramework at the root and calculate the checksum of the resulting file, which will be needed for the Package manifest.
-
-```swift
-# Create the ZIP file
-zip -r -X WebRTC.xcframework.zip WebRTC.xcframework
-```
-
-```swift
-# Calculate the checksum
-swift package compute-checksum WebRTC.xcframework.zip
-```
-
-#### Release
-
-* Change version in PlivoWebRTC.podspec in develop branch and commit it.
-* Create existing production master tag with the same version.
-* Merge changes from develop to master and create a new tag.
-* Release on cocoapods using these commands : 
-```swift
-  git tag '1.0.6'
-  git push --tags
-  pod cache clean --all
-  pod trunk register {EMAIL} ‘{NAME}' --description='macbook air'
-```
-* Verify Email from cocoapods.
-* Release on CocoaPods. 
-```swift
- pod lib lint --verbose --allow-warnings --no-clean
- pod spec lint --verbose
- pod trunk push PlivoWebRTC.podspec --verbose
-```
 ### Install PlivoWebRTC Framework from Carthage
 
 > Requires Carthage version 0.38 or higher
 
 1. Add `binary "https://raw.githubusercontent.com/plivo/plivo-webrtc-ios/main/PlivoWebRTC.json"` to your Cartfile.
 2. Run `carthage update --use-xcframeworks`.
-3. Go to your Xcode project's `"General"` settings. Open `<YOUR_XCODE_PROJECT_DIRECTORY>/Carthage/Build/iOS` in Finder and drag `WebRTC.framework` to the `"Embedded Binaries"` section in Xcode. Make sure `Copy items if needed` is selected and click `Finish`.
+3. Go to your Xcode project's `"General"` settings. Open `<YOUR_XCODE_PROJECT_DIRECTORY>/Carthage/Build/iOS` in Finder and drag `WebRTC.xcframework` to the `"Embedded Binaries"` section in Xcode. Make sure `Copy items if needed` is selected and click `Finish`.
