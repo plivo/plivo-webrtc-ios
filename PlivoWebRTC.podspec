@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PlivoWebRTC"
-  s.version      = "1.1.3"
+  s.version      = "1.1.4"
   s.summary      = "WebRTC XCFramework"
   s.description  = "WebRTC XCFramework for Plivo SDK's"
   s.homepage     = "https://www.plivo.com/docs/sdk/client/ios/overview/"
@@ -12,9 +12,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.ios.deployment_target  = '10.0'
   s.ios.vendored_frameworks = 'WebRTC.xcframework'
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
-  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
 end
 
