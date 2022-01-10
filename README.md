@@ -9,7 +9,7 @@
 
 # PlivoWebRTC 
 
-This is WebRTC framework for iOS that [Plivo](https://plivo.com/) builds on top of [Google WebRTC](https://webrtc.org/native-code/ios/). It includes build which is bitcode enabled.
+This is WebRTC framework for iOS that [Plivo](https://plivo.com/) builds on top of [Google WebRTC](https://webrtc.github.io/webrtc-org/native-code/ios/). It includes build which is bitcode enabled.
 
 ## Requirements
 
